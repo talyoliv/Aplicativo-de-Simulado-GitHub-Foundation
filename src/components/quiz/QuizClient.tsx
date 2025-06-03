@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
@@ -95,6 +96,7 @@ export default function QuizClient({ questions: initialQuestions, initialNumQues
       </div>
       
       <QuestionDisplay
+        key={currentQuestion.id} // Added key here
         question={currentQuestion}
         questionNumber={currentQuestionIndex + 1}
         totalQuestions={questions.length}
