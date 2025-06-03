@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -12,7 +13,7 @@ export default function HomePage() {
   const [numQuestions, setNumQuestions] = useState<string>('20');
   const router = useRouter();
 
-  const questionOptions = ['20', '30', '40', '50'];
+  const questionOptions = ['5', '10', '20', '30', '40', '50'];
 
   const handleStartSimulation = () => {
     router.push(`/simulado?numQuestoes=${numQuestions}`);
@@ -39,10 +40,10 @@ export default function HomePage() {
               id="numQuestions"
               value={numQuestions}
               onValueChange={setNumQuestions}
-              className="grid grid-cols-2 gap-4 sm:grid-cols-4"
+              className="grid grid-cols-2 sm:grid-cols-3 gap-4"
             >
               {questionOptions.map((option) => (
-                <div key={option} className="flex items-center space-x-2">
+                <div key={option} className="flex items-center space-x-2 justify-center">
                   <RadioGroupItem value={option} id={`option-${option}`} />
                   <Label htmlFor={`option-${option}`} className="text-base cursor-pointer hover:text-primary transition-colors">
                     {option}

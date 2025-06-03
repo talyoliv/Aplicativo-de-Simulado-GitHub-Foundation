@@ -1,3 +1,4 @@
+
 import { Suspense } from 'react';
 import QuizClient from '@/components/quiz/QuizClient';
 import { getShuffledQuestions } from '@/data/questions';
@@ -44,7 +45,7 @@ export default function SimuladoPage({ searchParams }: SimuladoPageProps) {
   const numQuestoesParam = searchParams.numQuestoes;
   const numQuestoes = parseInt(numQuestoesParam || '20', 10);
 
-  if (isNaN(numQuestoes) || numQuestoes <= 0 || ![20,30,40,50].includes(numQuestoes)) {
+  if (isNaN(numQuestoes) || numQuestoes <= 0 || ![5, 10, 20, 30, 40, 50].includes(numQuestoes)) {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen p-4">
             <Card className="w-full max-w-md text-center">
@@ -64,7 +65,7 @@ export default function SimuladoPage({ searchParams }: SimuladoPageProps) {
 
   const questions: Question[] = getShuffledQuestions(numQuestoes);
 
-  if (questions.length === 0) {
+  if (questions.length === 0 && numQuestoes > 0) { // Also check if numQuestoes was valid but no questions returned
      return (
         <div className="flex flex-col items-center justify-center min-h-screen p-4">
             <Card className="w-full max-w-md text-center">
@@ -72,7 +73,7 @@ export default function SimuladoPage({ searchParams }: SimuladoPageProps) {
                     <h1 className="text-2xl font-bold text-destructive">Erro</h1>
                 </CardHeader>
                 <CardContent>
-                    <p className="mb-4">Não foi possível carregar as questões. Tente novamente.</p>
+                    <p className="mb-4">Não foi possível carregar as questões para o número selecionado. Tente novamente ou escolha um número diferente.</p>
                     <Button asChild>
                         <Link href="/">Voltar ao Início</Link>
                     </Button>
@@ -81,6 +82,7 @@ export default function SimuladoPage({ searchParams }: SimuladoPageProps) {
         </div>
     );
   }
+
 
   return (
     <main className="flex-grow flex flex-col items-center justify-start py-8">
