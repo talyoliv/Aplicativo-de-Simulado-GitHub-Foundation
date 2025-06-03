@@ -599,7 +599,665 @@
     ],
     "correctAnswerId": "b",
     "explanation": "Seguir usuários e organizações ajuda você a se manter atualizado sobre o trabalho deles e a descobrir novos projetos e tendências na comunidade GitHub."
+  },
+  {
+    "id": 51,
+    "text": "Quais são os três principais tipos de contas GitHub mencionadas para diferentes usos?",
+    "options": [
+      { "id": "a", "text": "Gratuita, Paga, Ilimitada." },
+      { "id": "b", "text": "Estudante, Professor, Corporativa." },
+      { "id": "c", "text": "Pessoal, Organização, Empresarial (Enterprise)." },
+      { "id": "d", "text": "Desenvolvedor, Designer, Gerente de Projeto." }
+    ],
+    "correctAnswerId": "c",
+    "explanation": "O GitHub oferece contas Pessoais para indivíduos, contas de Organização para colaboração em equipe, e contas Empresariais (Enterprise) para necessidades de grandes empresas com opções de auto-hospedagem ou nuvem gerenciada."
+  },
+  {
+    "id": 52,
+    "text": "Onde normalmente se encontra a barra de ferramentas de formatação de texto Markdown ao comentar em uma Issue ou Pull Request no GitHub?",
+    "options": [
+      { "id": "a", "text": "Apenas no aplicativo GitHub Desktop." },
+      { "id": "b", "text": "Acima da caixa de texto do comentário." },
+      { "id": "c", "text": "Nas configurações do repositório." },
+      { "id": "d", "text": "Não existe barra de ferramentas, apenas a sintaxe Markdown manual." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O GitHub fornece uma barra de ferramentas útil acima dos campos de texto para comentários em Issues e Pull Requests, que ajuda a aplicar formatação Markdown sem precisar memorizar toda a sintaxe."
+  },
+  {
+    "id": 53,
+    "text": "Qual o propósito principal do GitHub Desktop?",
+    "options": [
+      { "id": "a", "text": "Substituir completamente a interface web do github.com." },
+      { "id": "b", "text": "Fornecer uma interface gráfica para interagir com repositórios Git, simplificando comandos comuns como commit, push, pull e merge." },
+      { "id": "c", "text": "Apenas para gerenciar notificações." },
+      { "id": "d", "text": "Para editar código diretamente, como um IDE." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "GitHub Desktop é uma aplicação que facilita o uso do Git para aqueles que preferem uma interface visual em vez da linha de comando."
+  },
+  {
+    "id": 54,
+    "text": "Uma das principais funcionalidades do GitHub Mobile é:",
+    "options": [
+      { "id": "a", "text": "Executar GitHub Actions diretamente do celular." },
+      { "id": "b", "text": "Gerenciar notificações, revisar código, fazer merge de pull requests e colaborar em issues de qualquer lugar." },
+      { "id": "c", "text": "Escrever código complexo usando um editor integrado." },
+      { "id": "d", "text": "Configurar ambientes de Codespaces." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O GitHub Mobile permite que você se mantenha produtivo e conectado aos seus projetos mesmo quando não está no computador, focando em tarefas de revisão e gerenciamento."
+  },
+  {
+    "id": 55,
+    "text": "O que é um 'remote' na terminologia Git?",
+    "options": [
+      { "id": "a", "text": "Um backup local do seu repositório." },
+      { "id": "b", "text": "Uma versão do Git que pode ser acessada sem internet." },
+      { "id": "c", "text": "Um ponteiro para um repositório hospedado em outro lugar (geralmente em um servidor como o GitHub), que permite a colaboração e sincronização de código." },
+      { "id": "d", "text": "Um branch especial que não pode ser modificado." }
+    ],
+    "correctAnswerId": "c",
+    "explanation": "Remotes, como o 'origin', são como apelidos para URLs de repositórios remotos, facilitando comandos como 'git push origin main'."
+  },
+  {
+    "id": 56,
+    "text": "Qual arquivo é recomendado para informar aos usuários sobre a licença de software do seu projeto?",
+    "options": [
+      { "id": "a", "text": "README.md" },
+      { "id": "b", "text": "CONTRIBUTING.md" },
+      { "id": "c", "text": "LICENSE" },
+      { "id": "d", "text": "SECURITY.md" }
+    ],
+    "correctAnswerId": "c",
+    "explanation": "O arquivo LICENSE (ou LICENSE.md) é o local padrão para declarar os termos sob os quais seu software pode ser usado, modificado e distribuído."
+  },
+  {
+    "id": 57,
+    "text": "Para que serve a funcionalidade 'Feature Previews' (Pré-visualizações de Recursos) no GitHub?",
+    "options": [
+      { "id": "a", "text": "Para visualizar o design final de um site GitHub Pages." },
+      { "id": "b", "text": "Permitir que os usuários experimentem novos recursos do GitHub antes de serem lançados oficialmente e forneçam feedback." },
+      { "id": "c", "text": "Para testar GitHub Actions." },
+      { "id": "d", "text": "Um modo de visualização apenas para administradores de organização." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Feature Previews dão aos usuários a chance de testar funcionalidades beta e ajudar o GitHub a aprimorá-las antes do lançamento geral."
+  },
+  {
+    "id": 58,
+    "text": "Como você pode criar um novo branch a partir de uma issue no GitHub?",
+    "options": [
+      { "id": "a", "text": "Apenas através da linha de comando Git." },
+      { "id": "b", "text": "Na página da issue, geralmente há um botão ou link 'Create a branch' (Criar um branch) que automaticamente nomeia o branch com base na issue." },
+      { "id": "c", "text": "Editando o título da issue para incluir o nome do branch." },
+      { "id": "d", "text": "Essa funcionalidade não existe." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O GitHub facilita a criação de branches diretamente de issues, ajudando a vincular o trabalho de desenvolvimento à tarefa rastreada."
+  },
+  {
+    "id": 59,
+    "text": "O que são 'issue forms' e como diferem de 'issue templates'?",
+    "options": [
+      { "id": "a", "text": "Issue forms são para bugs, templates são para funcionalidades." },
+      { "id": "b", "text": "Issue forms usam uma sintaxe YAML para criar formulários estruturados com campos específicos (texto, dropdown, checkboxes), enquanto templates usam Markdown para um formato mais livre." },
+      { "id": "c", "text": "Issue forms são preenchidos automaticamente, templates são manuais." },
+      { "id": "d", "text": "Não há diferença, são termos intercambiáveis." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Issue forms oferecem uma maneira mais estruturada e guiada para os usuários relatarem issues, garantindo que todos os campos necessários sejam preenchidos de forma consistente."
+  },
+  {
+    "id": 60,
+    "text": "Em um pull request, o que representam os 'base branch' e 'compare branch'?",
+    "options": [
+      { "id": "a", "text": "Base é o branch mais antigo, compare é o mais novo." },
+      { "id": "b", "text": "Base é o branch onde as alterações serão mescladas (ex: `main`), e compare é o branch que contém as alterações propostas (ex: `feature-branch`)." },
+      { "id": "c", "text": "São dois nomes para o mesmo branch." },
+      { "id": "d", "text": "Base é para código de frontend, compare para backend." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O pull request propõe mesclar as alterações do 'compare branch' no 'base branch'."
+  },
+  {
+    "id": 61,
+    "text": "Qual a finalidade da aba 'Checks' em um pull request?",
+    "options": [
+      { "id": "a", "text": "Verificar a ortografia dos comentários." },
+      { "id": "b", "text": "Mostrar o status de verificações automatizadas, como testes de CI/CD, linters e outras análises de código configuradas através de GitHub Actions ou integrações." },
+      { "id": "c", "text": "Listar quem aprovou o pull request." },
+      { "id": "d", "text": "Verificar se o usuário tem permissão para fazer merge." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "A aba 'Checks' fornece feedback crucial sobre a qualidade e a integridade do código proposto no pull request."
+  },
+  {
+    "id": 62,
+    "text": "Um pull request com status 'Merged' significa que:",
+    "options": [
+      { "id": "a", "text": "As alterações foram rejeitadas." },
+      { "id": "b", "text": "As alterações propostas foram integradas com sucesso ao base branch." },
+      { "id": "c", "text": "O pull request ainda está aguardando revisão." },
+      { "id": "d", "text": "O pull request foi fechado sem merge." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Status comuns de PR incluem Open, Merged, Closed e Draft. 'Merged' indica que o código foi incorporado."
+  },
+  {
+    "id": 63,
+    "text": "Ao revisar um pull request, a opção 'Request changes' (Solicitar alterações) geralmente implica que:",
+    "options": [
+      { "id": "a", "text": "O pull request foi aprovado com pequenas sugestões." },
+      { "id": "b", "text": "O revisor encontrou problemas que precisam ser resolvidos antes que o PR possa ser aprovado e mesclado." },
+      { "id": "c", "text": "O revisor quer mais tempo para analisar." },
+      { "id": "d", "text": "O pull request é perfeito e não precisa de alterações." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Solicitar alterações é uma forma de bloquear o merge do PR até que as preocupações do revisor sejam abordadas pelo autor."
+  },
+  {
+    "id": 64,
+    "text": "Uma característica das GitHub Discussions é a capacidade de:",
+    "options": [
+      { "id": "a", "text": "Atribuir a discussão a um usuário específico para resolução." },
+      { "id": "b", "text": "Converter uma discussão ou um comentário em uma issue para rastreamento de trabalho." },
+      { "id": "c", "text": "Executar testes automatizados no conteúdo da discussão." },
+      { "id": "d", "text": "Fazer deploy automático de ideias postadas." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Se uma discussão evoluir para algo que requer uma ação concreta, ela pode ser facilmente convertida em uma issue para melhor acompanhamento."
+  },
+  {
+    "id": 65,
+    "text": "Como você pode ser notificado quando alguém menciona seu nome de usuário (ex: @seuUsuario) no GitHub?",
+    "options": [
+      { "id": "a", "text": "Apenas por e-mail." },
+      { "id": "b", "text": "O GitHub automaticamente envia notificações para menções (at-mentions) através da interface web, e-mail ou aplicativo móvel, dependendo das suas configurações." },
+      { "id": "c", "text": "Você precisa seguir a pessoa que te mencionou." },
+      { "id": "d", "text": "Menções não geram notificações." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "At-mentions são uma forma direta de chamar a atenção de alguém para uma conversa ou item específico."
+  },
+  {
+    "id": 66,
+    "text": "O que é uma Wiki em um repositório GitHub?",
+    "options": [
+      { "id": "a", "text": "Uma cópia exata do README.md." },
+      { "id": "b", "text": "Uma seção para hospedar documentação mais extensa sobre o projeto, como guias de usuário, informações de arquitetura, etc., que pode ser editada colaborativamente." },
+      { "id": "c", "text": "Uma lista de todos os contribuidores." },
+      { "id": "d", "text": "Um log de todas as GitHub Actions executadas." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Wikis são úteis para documentação que vai além do que é prático incluir no README, permitindo múltiplas páginas e uma estrutura mais elaborada."
+  },
+  {
+    "id": 67,
+    "text": "Qual é um tipo comum de evento que pode disparar um workflow de GitHub Actions?",
+    "options": [
+      { "id": "a", "text": "Quando um usuário visualiza o repositório." },
+      { "id": "b", "text": "Um `push` para um branch específico, ou a criação de um `pull request`." },
+      { "id": "c", "text": "Quando um arquivo é baixado do repositório." },
+      { "id": "d", "text": "Quando um usuário segue o repositório." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Eventos como `on: push` ou `on: pull_request` são gatilhos comuns para workflows de CI/CD e outras automações."
+  },
+  {
+    "id": 68,
+    "text": "Para começar a usar o GitHub Copilot em seu editor de código, você geralmente precisa:",
+    "options": [
+      { "id": "a", "text": "Instalar o Git." },
+      { "id": "b", "text": "Ter uma assinatura ativa do GitHub Copilot e instalar a extensão correspondente no seu IDE (como VS Code, JetBrains IDEs)." },
+      { "id": "c", "text": "Ser administrador do repositório." },
+      { "id": "d", "text": "Criar um arquivo de configuração especial no seu projeto." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O GitHub Copilot requer uma assinatura (pessoal ou via organização) e a instalação da extensão no ambiente de desenvolvimento suportado."
+  },
+  {
+    "id": 69,
+    "text": "Qual é o ciclo de vida típico de um GitHub Codespace?",
+    "options": [
+      { "id": "a", "text": "Criar, Usar uma vez, Excluir automaticamente." },
+      { "id": "b", "text": "Criar, Usar, Parar (para economizar custos, mas mantendo o estado), Retomar, Excluir (quando não for mais necessário ou após um período de inatividade configurado)." },
+      { "id": "c", "text": "Apenas Criar e Excluir." },
+      { "id": "d", "text": "Os Codespaces são permanentes e nunca são excluídos." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Os Codespaces podem ser parados para pausar a cobrança por tempo de computação e retomados posteriormente. Eles também podem ser configurados para exclusão automática após inatividade."
+  },
+  {
+    "id": 70,
+    "text": "O que é um arquivo `devcontainer.json` em um projeto?",
+    "options": [
+      { "id": "a", "text": "Um arquivo que lista todos os desenvolvedores do projeto." },
+      { "id": "b", "text": "Um arquivo de configuração que especifica como um GitHub Codespace (ou outro ambiente de contêiner de desenvolvimento) deve ser construído e configurado, incluindo a imagem base, extensões, ferramentas e configurações do editor." },
+      { "id": "c", "text": "Um arquivo de log de erros de desenvolvimento." },
+      { "id": "d", "text": "Um arquivo de licença para ferramentas de desenvolvimento." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O `devcontainer.json` (ou `.devcontainer/devcontainer.json`) permite padronizar e automatizar a configuração do ambiente de desenvolvimento para todos os colaboradores que usam Codespaces ou contêineres de desenvolvimento locais."
+  },
+  {
+    "id": 71,
+    "text": "A principal diferença entre o editor github.dev (acessado pressionando '.') e um GitHub Codespace completo é:",
+    "options": [
+      { "id": "a", "text": "github.dev requer uma assinatura paga, Codespaces são gratuitos." },
+      { "id": "b", "text": "github.dev é um editor leve no navegador para visualização e edição rápida de arquivos, sem um ambiente de execução ou terminal. Codespaces fornecem um ambiente de desenvolvimento completo na nuvem com terminal, depuração e capacidade de executar o código." },
+      { "id": "c", "text": "github.dev só funciona offline, Codespaces só online." },
+      { "id": "d", "text": "Não há diferença funcional significativa, apenas na interface." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O github.dev é ótimo para revisões de código e pequenas edições. Para desenvolvimento completo, compilação e execução, um Codespace é necessário."
+  },
+  {
+    "id": 72,
+    "text": "Qual é uma vantagem de usar GitHub Projects para gerenciamento de trabalho?",
+    "options": [
+      { "id": "a", "text": "Ele envia e-mails automaticamente para todos os stakeholders." },
+      { "id": "b", "text": "Ele se integra diretamente com Issues e Pull Requests, permitindo visualizá-los e organizá-los em layouts como quadros (Kanban) ou tabelas." },
+      { "id": "c", "text": "Ele substitui a necessidade de usar Git." },
+      { "id": "d", "text": "Ele só pode ser usado para projetos privados." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "GitHub Projects permite um planejamento e acompanhamento flexível do trabalho, diretamente ligado aos artefatos de desenvolvimento no GitHub."
+  },
+  {
+    "id": 73,
+    "text": "Qual a diferença principal entre GitHub Projects e GitHub Projects (classic)?",
+    "options": [
+      { "id": "a", "text": "Projects (classic) são mais caros." },
+      { "id": "b", "text": "A nova versão de GitHub Projects é mais poderosa, baseada em tabelas e quadros personalizáveis, com automação e maior integração, enquanto Projects (classic) são mais simples e baseados em colunas fixas." },
+      { "id": "c", "text": "Projects (classic) são apenas para repositórios públicos." },
+      { "id": "d", "text": "Não há diferença, apenas o nome mudou." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O GitHub está incentivando o uso da nova versão de Projects devido à sua maior flexibilidade e recursos avançados."
+  },
+  {
+    "id": 74,
+    "text": "O que são 'Enterprise Managed Users (EMUs)' no contexto do GitHub Enterprise?",
+    "options": [
+      { "id": "a", "text": "Um tipo especial de bot para automação empresarial." },
+      { "id": "b", "text": "Contas de usuário que são provisionadas e gerenciadas centralmente por uma empresa através de seu provedor de identidade (IdP), em vez de serem contas pessoais do GitHub." },
+      { "id": "c", "text": "Usuários com acesso a todos os repositórios da empresa por padrão." },
+      { "id": "d", "text": "Um programa de suporte premium para usuários corporativos." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "EMUs permitem que as empresas tenham maior controle sobre as contas de seus usuários no GitHub, integrando com sistemas de identidade como Azure AD, Okta, etc."
+  },
+  {
+    "id": 75,
+    "text": "Qual é um benefício chave das 'branch protection rules' (regras de proteção de branch)?",
+    "options": [
+      { "id": "a", "text": "Aumentar a velocidade de merge de pull requests." },
+      { "id": "b", "text": "Impedir que qualquer pessoa crie novos branches." },
+      { "id": "c", "text": "Aplicar requisitos como aprovações de revisões ou passagem em verificações de status antes que o código possa ser mesclado em branches importantes, protegendo a qualidade e estabilidade." },
+      { "id": "d", "text": "Arquivar branches automaticamente após um período." }
+    ],
+    "correctAnswerId": "c",
+    "explanation": "Regras de proteção de branch são essenciais para manter a integridade de branches críticos como `main` ou `develop`."
+  },
+  {
+    "id": 76,
+    "text": "A aba 'Security' em um repositório GitHub geralmente inclui:",
+    "options": [
+      { "id": "a", "text": "Apenas a lista de colaboradores." },
+      { "id": "b", "text": "Ferramentas e informações sobre políticas de segurança, alertas de dependências vulneráveis (Dependabot), varredura de código (CodeQL) e segredos." },
+      { "id": "c", "text": "As estatísticas de tráfego do repositório." },
+      { "id": "d", "text": "Configurações de GitHub Pages." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "A aba Security centraliza recursos para ajudar a manter a segurança do seu código e dependências."
+  },
+  {
+    "id": 77,
+    "text": "O que são 'teams' (equipes) dentro de uma organização GitHub?",
+    "options": [
+      { "id": "a", "text": "Grupos de repositórios." },
+      { "id": "b", "text": "Grupos de usuários que podem receber permissões para repositórios e serem mencionados coletivamente (ex: @minhaorganizacao/desenvolvedores)." },
+      { "id": "c", "text": "Projetos específicos dentro da organização." },
+      { "id": "d", "text": "Tipos de licenças para a organização." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Equipes simplificam o gerenciamento de acesso e a comunicação dentro de uma organização."
+  },
+  {
+    "id": 78,
+    "text": "Qual é um dos principais benefícios do 'open source' para a comunidade de desenvolvimento?",
+    "options": [
+      { "id": "a", "text": "Garante que o software seja sempre gratuito." },
+      { "id": "b", "text": "Promove a colaboração, aprendizado, transparência e a capacidade de construir sobre o trabalho de outros, acelerando a inovação." },
+      { "id": "c", "text": "Limita o número de pessoas que podem usar o software." },
+      { "id": "d", "text": "Torna o software mais difícil de manter." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O modelo open source permite que desenvolvedores de todo o mundo contribuam, aprendam e melhorem softwares de forma coletiva."
+  },
+  {
+    "id": 79,
+    "text": "O que é 'InnerSource'?",
+    "options": [
+      { "id": "a", "text": "Um tipo de licença de software restritiva." },
+      { "id": "b", "text": "A aplicação de práticas e princípios de desenvolvimento de código aberto (como colaboração, transparência, reuso de código) dentro dos limites de uma organização para seus projetos internos." },
+      { "id": "c", "text": "O código-fonte interno do GitHub." },
+      { "id": "d", "text": "Uma conferência anual sobre software proprietário." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "InnerSource busca trazer os benefícios da cultura open source para o desenvolvimento de software proprietário ou interno de uma empresa."
+  },
+  {
+    "id": 80,
+    "text": "Qual a finalidade de um arquivo `CONTRIBUTING.md` em um repositório?",
+    "options": [
+      { "id": "a", "text": "Listar todos os contribuidores e seus e-mails." },
+      { "id": "b", "text": "Fornecer diretrizes para potenciais contribuidores sobre como podem ajudar no projeto, incluindo padrões de código, processo de submissão de pull requests, e configuração do ambiente." },
+      { "id": "c", "text": "Descrever a licença do software." },
+      { "id": "d", "text": "Mostrar o histórico de versões do projeto." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Um bom `CONTRIBUTING.md` facilita e encoraja contribuições externas, tornando o processo mais claro."
+  },
+  {
+    "id": 81,
+    "text": "O que descreve a sintaxe básica de Markdown para criar um cabeçalho de nível 1?",
+    "options": [
+      { "id": "a", "text": "*Texto do Cabeçalho*" },
+      { "id": "b", "text": "<h1>Texto do Cabeçalho</h1>" },
+      { "id": "c", "text": "# Texto do Cabeçalho" },
+      { "id": "d", "text": "## Texto do Cabeçalho ##" }
+    ],
+    "correctAnswerId": "c",
+    "explanation": "Em Markdown, um único `#` seguido de um espaço e o texto cria um cabeçalho de nível 1 (o maior). `##` para nível 2, e assim por diante."
+  },
+  {
+    "id": 82,
+    "text": "Como se cria uma lista de tarefas em GitHub Flavored Markdown?",
+    "options": [
+      { "id": "a", "text": "Usando `[ ]` para item não feito e `[x]` para item feito, precedidos por um hífen ou asterisco." },
+      { "id": "b", "text": "Com a tag `<tasklist>`." },
+      { "id": "c", "text": "Apenas através da interface gráfica, não há sintaxe Markdown." },
+      { "id": "d", "text": "Digitando `TODO:` antes de cada item." }
+    ],
+    "correctAnswerId": "a",
+    "explanation": "Por exemplo: `- [x] Tarefa Concluída` e `- [ ] Tarefa Pendente`. Isso é renderizado como checkboxes clicáveis em issues e PRs."
+  },
+  {
+    "id": 83,
+    "text": "Qual das seguintes opções descreve uma característica do GitHub Mobile?",
+    "options": [
+      { "id": "a", "text": "Permite executar compilações de código complexas." },
+      { "id": "b", "text": "Oferece um ambiente de desenvolvimento completo com terminal." },
+      { "id": "c", "text": "Facilita a gestão de notificações e a revisão de código em trânsito." },
+      { "id": "d", "text": "É primariamente usado para editar arquivos de configuração do repositório." }
+    ],
+    "correctAnswerId": "c",
+    "explanation": "GitHub Mobile é otimizado para tarefas de colaboração e gerenciamento, como triagem de issues, revisão de PRs e acompanhamento de notificações."
+  },
+  {
+    "id": 84,
+    "text": "O que acontece ao 'clonar' um repositório?",
+    "options": [
+      { "id": "a", "text": "Cria-se um fork do repositório na sua conta GitHub." },
+      { "id": "b", "text": "Cria-se uma cópia local completa do repositório, incluindo todo o histórico de commits e branches." },
+      { "id": "c", "text": "Apenas o branch principal é baixado para sua máquina." },
+      { "id": "d", "text": "Você se torna o proprietário do repositório original." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O comando `git clone` baixa o repositório remoto para sua máquina local, permitindo que você trabalhe nele."
+  },
+  {
+    "id": 85,
+    "text": "Para que serve 'salvar um repositório com estrelas' (starring)?",
+    "options": [
+      { "id": "a", "text": "Para obter permissões de escrita no repositório." },
+      { "id": "b", "text": "Para marcar repositórios como favoritos ou interessantes, facilitando encontrá-los depois e também demonstrando apreço ao mantenedor." },
+      { "id": "c", "text": "Para iniciar automaticamente o download de atualizações do repositório." },
+      { "id": "d", "text": "Para criar uma cópia de segurança privada do repositório." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Dar 'star' é uma forma de curadoria pessoal e também um sinal social de popularidade ou utilidade de um projeto."
+  },
+  {
+    "id": 86,
+    "text": "O que são 'keywords' (palavras-chave) como 'closes', 'fixes', 'resolves' usadas em issues e pull requests?",
+    "options": [
+      { "id": "a", "text": "São usadas para formatar o texto em negrito." },
+      { "id": "b", "text": "São palavras-chave que, quando usadas em commits ou descrições de PRs seguidas de `#numero_da_issue`, podem automaticamente fechar a issue referenciada quando o PR é mesclado." },
+      { "id": "c", "text": "São usadas para adicionar labels automaticamente." },
+      { "id": "d", "text": "São comandos exclusivos do GitHub Desktop." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Essas palavras-chave ajudam a automatizar o fechamento de issues relacionadas quando o trabalho correspondente é concluído e integrado."
+  },
+  {
+    "id": 87,
+    "text": "Qual a diferença entre um pull request 'Open' e um 'Draft'?",
+    "options": [
+      { "id": "a", "text": "'Open' significa que foi aprovado, 'Draft' que foi rejeitado." },
+      { "id": "b", "text": "'Draft' é um PR em andamento que não está pronto para revisão formal e não notifica revisores, enquanto 'Open' (ou 'Ready for review') indica que está pronto para ser revisado." },
+      { "id": "c", "text": "'Open' são para repositórios públicos, 'Draft' para privados." },
+      { "id": "d", "text": "Não há diferença funcional, apenas visual." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Draft PRs são úteis para compartilhar trabalho em progresso e obter feedback inicial sem acionar o processo formal de revisão."
+  },
+  {
+    "id": 88,
+    "text": "O que é a opção 'Suggested Changes' (Sugestões de Alterações) em uma revisão de pull request?",
+    "options": [
+      { "id": "a", "text": "Um comentário genérico sobre o PR." },
+      { "id": "b", "text": "Permite que o revisor proponha modificações específicas no código diretamente na interface de revisão, que o autor do PR pode aplicar com um clique." },
+      { "id": "c", "text": "Uma forma de rejeitar o PR." },
+      { "id": "d", "text": "Um link para a documentação relevante." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Sugestões de alterações facilitam a colaboração, permitindo que revisores contribuam com edições concretas diretamente no diff do PR."
+  },
+  {
+    "id": 89,
+    "text": "Qual é um uso comum para GitHub Discussions do tipo 'Announcements' (Anúncios)?",
+    "options": [
+      { "id": "a", "text": "Para relatar bugs críticos." },
+      { "id": "b", "text": "Para que os mantenedores compartilhem notícias importantes, atualizações de lançamento ou outras informações relevantes com a comunidade do projeto." },
+      { "id": "c", "text": "Para fazer perguntas técnicas." },
+      { "id": "d", "text": "Para propor novas funcionalidades." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "A categoria 'Announcements' é ideal para comunicação unilateral dos mantenedores para a comunidade, como informar sobre novas versões ou mudanças no projeto."
+  },
+  {
+    "id": 90,
+    "text": "Para que serve 'pinning a discussion' (fixar uma discussão)?",
+    "options": [
+      { "id": "a", "text": "Para arquivar a discussão." },
+      { "id": "b", "text": "Para destacar discussões importantes ou frequentemente acessadas, mantendo-as no topo da lista de discussões." },
+      { "id": "c", "text": "Para convertê-la em uma issue." },
+      { "id": "d", "text": "Para restringir quem pode comentar." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Fixar discussões ajuda a dar visibilidade a tópicos relevantes, como FAQs, guias ou anúncios importantes."
+  },
+  {
+    "id": 91,
+    "text": "O que são GitHub Gists e para que são comumente usados?",
+    "options": [
+      { "id": "a", "text": "Repositórios completos com múltiplos arquivos e branches." },
+      { "id": "b", "text": "Pequenos trechos de código, notas ou arquivos individuais que podem ser compartilhados rapidamente. Cada Gist é um repositório Git." },
+      { "id": "c", "text": "Ferramentas de gerenciamento de projetos visuais." },
+      { "id": "d", "text": "Páginas de perfil de usuário." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Gists são ideais para compartilhar rapidamente snippets, exemplos de código, ou pequenas utilidades, podendo ser públicos ou secretos."
+  },
+  {
+    "id": 92,
+    "text": "Qual o propósito principal das GitHub Pages?",
+    "options": [
+      { "id": "a", "text": "Armazenar backups de repositórios." },
+      { "id": "b", "text": "Hospedar sites estáticos (HTML, CSS, JavaScript) diretamente de um repositório GitHub." },
+      { "id": "c", "text": "Gerenciar issues e pull requests." },
+      { "id": "d", "text": "Executar testes automatizados." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "GitHub Pages é um serviço de hospedagem gratuito para sites estáticos, ótimo para documentação de projetos, portfólios ou blogs."
+  },
+  {
+    "id": 93,
+    "text": "Onde você pode encontrar GitHub Actions pré-construídas para usar em seus workflows?",
+    "options": [
+      { "id": "a", "text": "Apenas no site oficial do Git." },
+      { "id": "b", "text": "No GitHub Marketplace e em repositórios públicos no GitHub." },
+      { "id": "c", "text": "Apenas dentro do GitHub Desktop." },
+      { "id": "d", "text": "Elas precisam ser criadas do zero para cada projeto." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O GitHub Marketplace é um hub central para descobrir e usar Actions criadas pela comunidade e por parceiros, facilitando a automação de tarefas comuns."
+  },
+  {
+    "id": 94,
+    "text": "O que é um 'dev container' (ex: arquivo `devcontainer.json`) no contexto de GitHub Codespaces?",
+    "options": [
+      { "id": "a", "text": "Um tipo de licença de software." },
+      { "id": "b", "text": "Um arquivo de configuração que define o ambiente de desenvolvimento para um Codespace, especificando a imagem Docker, extensões, ferramentas e configurações do VS Code." },
+      { "id": "c", "text": "Um contêiner físico onde os servidores do GitHub estão localizados." },
+      { "id": "d", "text": "Um dashboard para monitorar o uso do Codespace." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O `devcontainer.json` permite que os projetos definam um ambiente de desenvolvimento padronizado e reproduzível para todos os colaboradores usando Codespaces."
+  },
+  {
+    "id": 95,
+    "text": "Como você pode adicionar um 'assignee' (responsável) a uma issue ou pull request?",
+    "options": [
+      { "id": "a", "text": "Editando o título para incluir o nome do usuário." },
+      { "id": "b", "text": "Usando a barra lateral da issue/PR para selecionar um ou mais usuários, ou usando o comando `/assign @username` em um comentário." },
+      { "id": "c", "text": "Apenas o criador da issue/PR pode ser o responsável." },
+      { "id": "d", "text": "Enviando um e-mail para o suporte do GitHub." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Atribuir issues e PRs ajuda a indicar quem está encarregado de trabalhar em um item específico."
+  },
+  {
+    "id": 96,
+    "text": "Qual é a principal função do arquivo `CODEOWNERS` em um repositório?",
+    "options": [
+      { "id": "a", "text": "Listar todos os proprietários da organização GitHub." },
+      { "id": "b", "text": "Definir automaticamente indivíduos ou equipes como revisores para pull requests que modificam arquivos específicos no repositório." },
+      { "id": "c", "text": "Descrever o código de conduta do projeto." },
+      { "id": "d", "text": "Especificar a licença do software." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "CODEOWNERS ajuda a garantir que as pessoas certas revisem as alterações em partes específicas do código base."
+  },
+  {
+    "id": 97,
+    "text": "Qual é uma das principais opções de visibilidade para um repositório GitHub?",
+    "options": [
+      { "id": "a", "text": "Editável ou Somente Leitura." },
+      { "id": "b", "text": "Público, Privado ou Interno (para organizações)." },
+      { "id": "c", "text": "Arquivado ou Ativo." },
+      { "id": "d", "text": "Comunitário ou Empresarial." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "A visibilidade determina quem pode ver e interagir com o conteúdo do repositório. Público é visível para todos, Privado apenas para colaboradores explícitos, e Interno para membros da organização."
+  },
+  {
+    "id": 98,
+    "text": "O que o GitHub Sponsors permite que a comunidade faça?",
+    "options": [
+      { "id": "a", "text": "Comprar ações do GitHub." },
+      { "id": "b", "text": "Apoiar financeiramente desenvolvedores e organizações que mantêm projetos de código aberto." },
+      { "id": "c", "text": "Contratar desenvolvedores para projetos privados." },
+      { "id": "d", "text": "Votar em novas funcionalidades para o GitHub." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "GitHub Sponsors é uma plataforma para financiar o trabalho de mantenedores de projetos open source, ajudando a sustentar seus esforços."
+  },
+  {
+    "id": 99,
+    "text": "O GitHub Marketplace é um local para:",
+    "options": [
+      { "id": "a", "text": "Comprar mercadorias físicas do GitHub, como camisetas e adesivos." },
+      { "id": "b", "text": "Encontrar e instalar ferramentas e aplicativos (GitHub Apps e Actions) que se integram com o GitHub para aprimorar fluxos de trabalho." },
+      { "id": "c", "text": "Discutir e propor novas funcionalidades para o GitHub." },
+      { "id": "d", "text": "Hospedar grandes arquivos de dados para projetos." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "O Marketplace oferece uma variedade de integrações para CI/CD, análise de código, gerenciamento de projetos, monitoramento e muito mais."
+  },
+  {
+    "id": 100,
+    "text": "Qual é a principal diferença entre 'InnerSource' e 'open source'?",
+    "options": [
+      { "id": "a", "text": "InnerSource usa um sistema de controle de versão diferente do Git." },
+      { "id": "b", "text": "Open source refere-se a projetos públicos com contribuição aberta da comunidade global, enquanto InnerSource aplica metodologias e cultura de código aberto a projetos internos de uma empresa, com acesso restrito aos seus membros." },
+      { "id": "c", "text": "Projetos InnerSource não podem ter licenças." },
+      { "id": "d", "text": "Open source é sempre gratuito, InnerSource é sempre pago." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "A distinção fundamental reside no escopo de acesso e colaboração: open source é externo e público, InnerSource é interno à organização."
+  },
+  {
+    "id": 101,
+    "text": "Quando você 'fork' um repositório, o que acontece com os 'issues' e 'pull requests' do repositório original?",
+    "options": [
+      { "id": "a", "text": "Eles são copiados para o seu fork." },
+      { "id": "b", "text": "Apenas os issues são copiados, os pull requests não." },
+      { "id": "c", "text": "Issues e pull requests não são copiados para o seu fork. O fork é uma cópia do código e do histórico de commits." },
+      { "id": "d", "text": "Você pode escolher quais issues e pull requests copiar durante o fork." }
+    ],
+    "correctAnswerId": "c",
+    "explanation": "Forking um repositório copia o código, branches e commits. Issues, pull requests, wikis, e configurações são específicos do repositório original e não são incluídos no fork por padrão."
+  },
+  {
+    "id": 102,
+    "text": "O que é um 'Profile README' no GitHub e como ele é ativado?",
+    "options": [
+      { "id": "a", "text": "Um arquivo README.md secreto visível apenas para o proprietário do perfil." },
+      { "id": "b", "text": "Um arquivo README.md em um repositório público com o mesmo nome do seu nome de usuário GitHub. Seu conteúdo é exibido na sua página de perfil." },
+      { "id": "c", "text": "Um recurso pago para personalizar o layout do perfil." },
+      { "id": "d", "text": "O primeiro README.md que você criou em qualquer repositório." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Criar um repositório público com o mesmo nome do seu nome de usuário (ex: `seu-usuario/seu-usuario`) e adicionar um `README.md` a ele ativará o Profile README."
+  },
+  {
+    "id": 103,
+    "text": "Qual o objetivo principal de configurar 'CODEOWNERS' em um repositório?",
+    "options": [
+      { "id": "a", "text": "Para listar os proprietários legais do código." },
+      { "id": "b", "text": "Para automaticamente solicitar revisões de indivíduos ou equipes específicas quando arquivos ou diretórios que eles 'possuem' são modificados em um pull request." },
+      { "id": "c", "text": "Para restringir quem pode fazer commit em certos arquivos." },
+      { "id": "d", "text": "Para definir quem recebe notificações de issues." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "CODEOWNERS ajuda a direcionar as revisões de código para as pessoas mais familiarizadas com as partes relevantes do projeto, melhorando a qualidade da revisão."
+  },
+  {
+    "id": 104,
+    "text": "Para que serve a opção 'Pin issue' (Fixar issue) em um repositório?",
+    "options": [
+      { "id": "a", "text": "Para fechar a issue permanentemente." },
+      { "id": "b", "text": "Para destacar até três issues importantes no topo da lista de issues do repositório, dando-lhes maior visibilidade." },
+      { "id": "c", "text": "Para atribuir a issue a todos os membros da equipe." },
+      { "id": "d", "text": "Para converter a issue em uma discussão." }
+    ],
+    "correctAnswerId": "b",
+    "explanation": "Fixar issues é útil para manter o foco em tarefas prioritárias, bugs críticos ou informações importantes para os colaboradores."
+  },
+  {
+    "id": 105,
+    "text": "Qual das seguintes opções NÃO é uma funcionalidade típica do GitHub Desktop?",
+    "options": [
+      { "id": "a", "text": "Criar commits e branches." },
+      { "id": "b", "text": "Fazer push e pull de alterações para/de repositórios remotos." },
+      { "id": "c", "text": "Executar workflows do GitHub Actions localmente." },
+      { "id": "d", "text": "Visualizar o histórico de commits e as diferenças entre eles." }
+    ],
+    "correctAnswerId": "c",
+    "explanation": "GitHub Desktop é uma interface gráfica para operações Git e interações com GitHub.com. A execução de workflows do GitHub Actions acontece nos servidores do GitHub, não localmente através do GitHub Desktop (embora ferramentas como `act` possam simular isso, não é uma feature nativa do Desktop)."
   }
 ]
-
-    
