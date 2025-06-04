@@ -33,3 +33,10 @@ Criar uma ferramenta simples, intuitiva e em português que permite aos usuário
 ## 📂 Base de Dados
 
 As questões (atualmente **105**) foram criadas com base no material oficial **Study Guide GitHub Foundations**, e estão estruturadas em um arquivo `.json` que serve como API local.
+
+---
+
+## Cloud Computing Service
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
+[Link para Visualização do Validador de Bandeira de Cartão de Crédito](https://aplicativo-de-simulado-git-hub-foun-nine.vercel.app/)

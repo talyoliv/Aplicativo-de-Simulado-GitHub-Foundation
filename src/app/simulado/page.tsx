@@ -1,4 +1,3 @@
-
 import { Suspense } from 'react';
 import QuizClient from '@/components/quiz/QuizClient';
 import { getShuffledQuestions, getQuestionsByIds } from '@/data/questions';
@@ -72,18 +71,17 @@ export default function SimuladoPage({ searchParams }: SimuladoPageProps) {
   if (reviewIdsParam) {
     isReviewMode = true;
     const ids = reviewIdsParam.split(',').map(id => parseInt(id, 10)).filter(id => !isNaN(id));
-    if (ids.length === 0 && reviewIdsParam.length > 0) { // reviewIds was present but malformed or empty after parse
-        return <ErrorDisplay title="Erro na Revisão" message="Nenhuma questão válida encontrada para revisão. Verifique se selecionou questões ou tente novamente." />;
+    if (ids.length === 0 && reviewIdsParam.length > 0) {
+      return <ErrorDisplay title="Erro na Revisão" message="Nenhuma questão válida encontrada para revisão. Verifique se selecionou questões ou tente novamente." />;
     }
     questions = getQuestionsByIds(ids);
-    if (questions.length === 0 && ids.length > 0) { // Valid IDs were passed but no questions matched
-        return <ErrorDisplay title="Erro na Revisão" message="As questões selecionadas para revisão não foram encontradas. Tente limpar seu histórico de erros ou volte ao início." />;
+    if (questions.length === 0 && ids.length > 0) {
+      return <ErrorDisplay title="Erro na Revisão" message="As questões selecionadas para revisão não foram encontradas. Tente limpar seu histórico de erros ou volte ao início." />;
     }
-    if (questions.length === 0 && ids.length === 0 && reviewIdsParam === "") { // reviewIds was explicitly empty
-         return <ErrorDisplay title="Revisão Vazia" message="Não há questões para revisar no momento. Continue praticando!" />;
+    if (questions.length === 0 && ids.length === 0 && reviewIdsParam === "") {
+      return <ErrorDisplay title="Revisão Vazia" message="Não há questões para revisar no momento. Continue praticando!" />;
     }
     initialQuestionCount = questions.length;
-
   } else {
     const numQuestoes = parseInt(numQuestoesParam || '20', 10);
     if (isNaN(numQuestoes) || numQuestoes <= 0 || ![5, 10, 20, 30, 40, 50].includes(numQuestoes)) {
@@ -97,21 +95,21 @@ export default function SimuladoPage({ searchParams }: SimuladoPageProps) {
     }
   }
 
-  if (questions.length === 0 && initialQuestionCount > 0 && !isReviewMode) {
-     return <ErrorDisplay title="Nenhuma Questão Encontrada" message="Não foi possível carregar as questões. Por favor, tente novamente." />;
+  if (isReviewMode && questions.length === 0) {
+    return <ErrorDisplay title="Revisão Concluída" message="Você não tem mais questões erradas para revisar no momento. Parabéns!" />;
   }
-   if (isReviewMode && questions.length === 0) {
-     return <ErrorDisplay title="Revisão Concluída" message="Você não tem mais questões erradas para revisar no momento. Parabéns!" />;
-   }
 
+  if (questions.length === 0 && initialQuestionCount > 0 && !isReviewMode) {
+    return <ErrorDisplay title="Nenhuma Questão Encontrada" message="Não foi possível carregar as questões. Por favor, tente novamente." />;
+  }
 
   return (
     <main className="flex-grow flex flex-col items-center justify-start py-8">
       <Suspense fallback={<QuizLoadingSkeleton />}>
         <QuizClient 
-            questions={questions} 
-            initialNumQuestions={initialQuestionCount} 
-            isReviewMode={isReviewMode} 
+          questions={questions} 
+          initialNumQuestions={initialQuestionCount} 
+          isReviewMode={isReviewMode} 
         />
       </Suspense>
     </main>
@@ -119,3 +117,4 @@ export default function SimuladoPage({ searchParams }: SimuladoPageProps) {
 }
 
 export const dynamic = 'force-dynamic';
+
