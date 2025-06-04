@@ -1,7 +1,5 @@
-
 import { Suspense } from 'react';
 import QuizClient from '@/components/quiz/QuizClient';
-import { getShuffledQuestions } from '@/data/questions';
 import type { Question } from '@/types';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -40,49 +38,85 @@ function QuizLoadingSkeleton() {
   );
 }
 
+// Função para buscar perguntas do JSON remoto no GitHub
+async function fetchQuestions(num: number): Promise<Question[]> {
+  const res = await fetch(
+    'https://raw.githubusercontent.com/talyoliv/github-foundation-questions-api/main/github_foundations_questions_pt_br.json',
+    { cache: 'no-store' }
+  );
 
-export default function SimuladoPage({ searchParams }: SimuladoPageProps) {
+  if (!res.ok) {
+    throw new Error('Falha ao buscar questões da API');
+  }
+
+  const allQuestions: Question[] = await res.json();
+
+  const shuffled = allQuestions.sort(() => 0.5 - Math.random());
+
+  return shuffled.slice(0, num);
+}
+
+export default async function SimuladoPage({ searchParams }: SimuladoPageProps) {
   const numQuestoesParam = searchParams.numQuestoes;
   const numQuestoes = parseInt(numQuestoesParam || '20', 10);
 
   if (isNaN(numQuestoes) || numQuestoes <= 0 || ![5, 10, 20, 30, 40, 50].includes(numQuestoes)) {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-4">
-            <Card className="w-full max-w-md text-center">
-                <CardHeader>
-                    <h1 className="text-2xl font-bold text-destructive">Erro</h1>
-                </CardHeader>
-                <CardContent>
-                    <p className="mb-4">Número de questões inválido. Por favor, selecione um valor válido na página inicial.</p>
-                    <Button asChild>
-                        <Link href="/">Voltar ao Início</Link>
-                    </Button>
-                </CardContent>
-            </Card>
-        </div>
+      <div className="flex flex-col items-center justify-center min-h-screen p-4">
+        <Card className="w-full max-w-md text-center">
+          <CardHeader>
+            <h1 className="text-2xl font-bold text-destructive">Erro</h1>
+          </CardHeader>
+          <CardContent>
+            <p className="mb-4">Número de questões inválido. Por favor, selecione um valor válido na página inicial.</p>
+            <Button asChild>
+              <Link href="/">Voltar ao Início</Link>
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
     );
   }
 
-  const questions: Question[] = getShuffledQuestions(numQuestoes);
+  let questions: Question[] = [];
 
-  if (questions.length === 0 && numQuestoes > 0) { // Also check if numQuestoes was valid but no questions returned
-     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-4">
-            <Card className="w-full max-w-md text-center">
-                <CardHeader>
-                    <h1 className="text-2xl font-bold text-destructive">Erro</h1>
-                </CardHeader>
-                <CardContent>
-                    <p className="mb-4">Não foi possível carregar as questões para o número selecionado. Tente novamente ou escolha um número diferente.</p>
-                    <Button asChild>
-                        <Link href="/">Voltar ao Início</Link>
-                    </Button>
-                </CardContent>
-            </Card>
-        </div>
+  try {
+    questions = await fetchQuestions(numQuestoes);
+  } catch (error) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen p-4">
+        <Card className="w-full max-w-md text-center">
+          <CardHeader>
+            <h1 className="text-2xl font-bold text-destructive">Erro</h1>
+          </CardHeader>
+          <CardContent>
+            <p className="mb-4">Não foi possível carregar as questões. Tente novamente mais tarde.</p>
+            <Button asChild>
+              <Link href="/">Voltar ao Início</Link>
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
     );
   }
 
+  if (questions.length === 0 && numQuestoes > 0) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen p-4">
+        <Card className="w-full max-w-md text-center">
+          <CardHeader>
+            <h1 className="text-2xl font-bold text-destructive">Erro</h1>
+          </CardHeader>
+          <CardContent>
+            <p className="mb-4">Não foi possível carregar as questões para o número selecionado. Tente novamente ou escolha um número diferente.</p>
+            <Button asChild>
+              <Link href="/">Voltar ao Início</Link>
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <main className="flex-grow flex flex-col items-center justify-start py-8">
@@ -93,4 +127,4 @@ export default function SimuladoPage({ searchParams }: SimuladoPageProps) {
   );
 }
 
-export const dynamic = 'force-dynamic'; // Ensure fresh questions each time
+export const dynamic = 'force-dynamic';
