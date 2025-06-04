@@ -7,7 +7,8 @@ import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Target } from 'lucide-react';
+import { Target, History } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HomePage() {
   const [numQuestions, setNumQuestions] = useState<string>('20');
@@ -40,7 +41,7 @@ export default function HomePage() {
               id="numQuestions"
               value={numQuestions}
               onValueChange={setNumQuestions}
-              className="grid grid-cols-2 sm:grid-cols-3 gap-4"
+              className="grid grid-cols-3 gap-4"
             >
               {questionOptions.map((option) => (
                 <div key={option} className="flex items-center space-x-2 justify-center">
@@ -58,6 +59,12 @@ export default function HomePage() {
             size="lg"
           >
             Iniciar Simulado
+          </Button>
+          <Button variant="outline" className="w-full" asChild>
+            <Link href="/historico">
+              <History className="mr-2 h-5 w-5" />
+              Ver Histórico de Simulados
+            </Link>
           </Button>
         </CardContent>
       </Card>

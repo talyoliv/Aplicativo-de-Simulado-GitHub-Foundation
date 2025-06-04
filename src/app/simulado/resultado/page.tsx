@@ -1,7 +1,8 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle2, XCircle, BarChart3, Clock } from 'lucide-react';
+import { CheckCircle2, XCircle, BarChart3, Clock, History } from 'lucide-react';
 import { Suspense } from 'react';
 
 interface ResultadoPageProps {
@@ -75,9 +76,15 @@ function ResultsContent({ searchParams }: ResultadoPageProps) {
           </div>
         )}
       </CardContent>
-      <CardFooter className="flex flex-col sm:flex-row justify-center gap-4 pt-6">
+      <CardFooter className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-6">
         <Button asChild className="w-full sm:w-auto">
           <Link href="/">Fazer Novo Simulado</Link>
+        </Button>
+        <Button variant="outline" asChild className="w-full sm:w-auto">
+          <Link href="/historico">
+            <History className="mr-2 h-5 w-5" />
+            Ver Histórico
+          </Link>
         </Button>
       </CardFooter>
     </Card>
