@@ -3,7 +3,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import type { Question, UserAnswer } from '@/types';
+import type { Question, UserAnswer, SimulationResult } from '@/types';
 import QuestionDisplay from './QuestionDisplay';
 import { Progress } from '@/components/ui/progress';
 import { Button } from '@/components/ui/button';
@@ -66,15 +66,32 @@ export default function QuizClient({ questions: initialQuestions, initialNumQues
       const incorrectAnswers = userAnswers.length - correctAnswers;
       const endTime = Date.now();
       const timeTaken = startTime ? Math.round((endTime - startTime) / 1000) : 0; // in seconds
+      const percentage = questions.length > 0 ? Math.round((correctAnswers / questions.length) * 100) : 0;
+
+      const result: SimulationResult = {
+        id: new Date().toISOString(),
+        date: new Date().toISOString(),
+        total: questions.length,
+        corretas: correctAnswers,
+        incorretas: incorrectAnswers,
+        percentage: percentage,
+        tempo: timeTaken,
+      };
+
+      try {
+        const historyString = localStorage.getItem('simulationHistory');
+        const history: SimulationResult[] = historyString ? JSON.parse(historyString) : [];
+        history.unshift(result); // Add new result to the beginning
+        localStorage.setItem('simulationHistory', JSON.stringify(history.slice(0, 50))); // Keep last 50 results
+      } catch (error) {
+        console.error("Failed to save simulation history:", error);
+      }
 
       router.push(`/simulado/resultado?total=${questions.length}&corretas=${correctAnswers}&incorretas=${incorrectAnswers}&tempo=${timeTaken}`);
     }
-  }, [currentQuestionIndex, questions.length, userAnswers, router, startTime]);
+  }, [currentQuestionIndex, questions, userAnswers, router, startTime]);
 
   if (questions.length === 0 || currentQuestionIndex >= questions.length) {
-    // This can happen if questions are still loading or an error occurred.
-    // Or if navigation tried to go beyond the last question without redirecting.
-    // A more robust loading/error state could be added here.
     return (
       <div className="flex flex-col items-center justify-center h-full">
         <p className="text-lg">Carregando questões ou simulado finalizado...</p>
@@ -96,7 +113,7 @@ export default function QuizClient({ questions: initialQuestions, initialNumQues
       </div>
       
       <QuestionDisplay
-        key={currentQuestion.id} // Added key here
+        key={currentQuestion.id}
         question={currentQuestion}
         questionNumber={currentQuestionIndex + 1}
         totalQuestions={questions.length}
