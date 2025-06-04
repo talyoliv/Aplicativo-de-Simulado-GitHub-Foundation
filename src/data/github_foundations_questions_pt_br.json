@@ -2,87 +2,87 @@
 [
   {
     "id": 1,
-    "text": "Em qual cenário o controle de versão se torna crucial para uma equipe de desenvolvimento?",
+    "text": "Uma equipe de desenvolvimento está crescendo rapidamente e a colaboração no código se tornou caótica, com versões conflitantes e perda de trabalho. Qual é a principal solução que o controle de versão, como o Git, oferece para este cenário?",
     "options": [
-      { "id": "a", "text": "Apenas quando o projeto utiliza uma única linguagem de programação." },
-      { "id": "b", "text": "Principalmente para gerar documentação automaticamente." },
-      { "id": "c", "text": "Quando múltiplos desenvolvedores colaboram no mesmo código-fonte e precisam rastrear alterações, reverter para versões anteriores e gerenciar diferentes linhas de desenvolvimento simultaneamente." },
-      { "id": "d", "text": "Somente em projetos com mais de 1000 arquivos." }
+      { "id": "a", "text": "Automatizar a geração de documentação técnica do projeto." },
+      { "id": "b", "text": "Fornecer um sistema para rastrear alterações no código, permitir que múltiplos desenvolvedores trabalhem em paralelo sem sobrescrever o trabalho uns dos outros, reverter para estados anteriores e gerenciar diferentes linhas de desenvolvimento (branches)." },
+      { "id": "c", "text": "Otimizar o desempenho do código em produção." },
+      { "id": "d", "text": "Gerenciar apenas projetos que utilizam uma única linguagem de programação." }
     ],
-    "correctAnswerId": "c",
-    "explanation": "Controle de versão (como o Git) é fundamental para registrar alterações, facilitar a colaboração, permitir a recuperação de versões e gerenciar branches, especialmente em equipes."
+    "correctAnswerId": "b",
+    "explanation": "Controle de versão (como o Git) é fundamental para registrar alterações, facilitar a colaboração, permitir a recuperação de versões e gerenciar branches, especialmente em equipes. Ele resolve problemas de concorrência e rastreabilidade."
   },
   {
     "id": 2,
-    "text": "Um desenvolvedor precisa trabalhar em uma nova funcionalidade sem afetar a estabilidade da base de código principal. Qual a relação entre Git e GitHub que melhor suporta essa necessidade?",
+    "text": "Um desenvolvedor precisa implementar uma funcionalidade experimental que pode quebrar a aplicação. Ele quer isolar esse trabalho do branch principal (`main`). Como Git e GitHub colaboram para atender a essa necessidade de forma segura?",
     "options": [
-      { "id": "a", "text": "Git fornece o comando 'commit', e GitHub armazena os commits na nuvem." },
-      { "id": "b", "text": "Git, como sistema de controle de versão distribuído, permite a criação de branches locais para isolar o trabalho. GitHub complementa isso hospedando o repositório remoto e facilitando a colaboração nesses branches através de pull requests." },
-      { "id": "c", "text": "GitHub é uma interface gráfica para o Git, tornando os comandos mais fáceis." },
-      { "id": "d", "text": "Git é usado para desenvolvimento individual, enquanto GitHub é uma plataforma de mídia social para desenvolvedores." }
+      { "id": "a", "text": "O GitHub automaticamente cria backups diários do branch `main`, e o Git permite reverter commits." },
+      { "id": "b", "text": "Git permite a criação de um 'branch' local, que é uma linha de desenvolvimento independente. O desenvolvedor pode commitar suas alterações experimentais nesse branch. GitHub, como plataforma de hospedagem, permite que esse branch seja enviado (push) para o repositório remoto, facilitando a colaboração e eventual 'pull request' para integrar a funcionalidade, se bem-sucedida." },
+      { "id": "c", "text": "Git apenas armazena metadados sobre os arquivos, enquanto o GitHub armazena o código real." },
+      { "id": "d", "text": "Apenas o GitHub permite a criação de branches, e o Git é usado para enviar esses branches para a nuvem." }
     ],
     "correctAnswerId": "b",
-    "explanation": "Git permite branching local para desenvolvimento isolado. GitHub facilita a colaboração e a integração dessas branches no repositório central, além de oferecer ferramentas de code review e discussão."
+    "explanation": "Git permite branching local para desenvolvimento isolado. GitHub facilita a colaboração, o backup remoto desses branches e a integração controlada via pull requests, que podem ser revisados antes de mesclar no `main`."
   },
   {
     "id": 3,
-    "text": "Qual afirmação descreve mais precisamente o propósito de um 'commit' no Git?",
+    "text": "Após realizar várias modificações em arquivos de um projeto, um desenvolvedor executa o comando `git commit -m \"Adiciona autenticação de usuários\"`. Qual é o significado e o impacto fundamental deste comando no contexto do Git?",
     "options": [
-      { "id": "a", "text": "Um 'commit' é um backup completo de todos os repositórios do usuário no GitHub." },
-      { "id": "b", "text": "É uma mensagem enviada a outros colaboradores para discutir alterações propostas." },
-      { "id": "c", "text": "Um 'commit' representa um instantâneo lógico das alterações realizadas em um ou mais arquivos do projeto, acompanhado de uma mensagem descritiva e um identificador único (hash SHA-1), registrando um ponto específico no histórico do projeto." },
-      { "id": "d", "text": "É o ato de baixar as últimas alterações de um repositório remoto." }
+      { "id": "a", "text": "O comando envia as alterações diretamente para o repositório remoto no GitHub, atualizando o branch `main`." },
+      { "id": "b", "text": "O comando cria um novo branch chamado \"Adiciona autenticação de usuários\"." },
+      { "id": "c", "text": "O comando prepara os arquivos modificados para serem incluídos no próximo commit (staging), mas não os registra permanentemente." },
+      { "id": "d", "text": "O comando registra um 'snapshot' das alterações que estavam na 'staging area' no histórico local do repositório. Este snapshot é identificado por um hash SHA-1 único e associado à mensagem fornecida, marcando um ponto de salvamento significativo no projeto." }
     ],
-    "correctAnswerId": "c",
-    "explanation": "Um commit é um snapshot das mudanças, identificado por um hash e acompanhado de uma mensagem, formando o histórico do projeto."
+    "correctAnswerId": "d",
+    "explanation": "Um 'commit' no Git salva o estado atual dos arquivos da staging area no histórico local. Ele não interage com o repositório remoto (GitHub) por si só; para isso, seria necessário um `git push`."
   },
   {
     "id": 4,
-    "text": "O 'GitHub flow' é um fluxo de trabalho que enfatiza a simplicidade e a implantação contínua. Qual passo NÃO faz parte do ciclo central do GitHub flow?",
+    "text": "O GitHub Flow é um fluxo de trabalho leve e baseado em branches. Qual das seguintes práticas é fundamental para o GitHub Flow, mas é desencorajada ou ausente em fluxos mais complexos como o GitFlow?",
     "options": [
-      { "id": "a", "text": "Criar um branch a partir do `main`." },
-      { "id": "b", "text": "Fazer commits no branch e enviar para o GitHub regularmente." },
-      { "id": "c", "text": "Abrir um pull request para discussão e revisão." },
-      { "id": "d", "text": "Manter múltiplos branches de longa duração para diferentes versões do produto (ex: `develop`, `release`)." }
+      { "id": "a", "text": "Fazer deploy diretamente de branches de funcionalidade para produção antes de mesclar no `main`." },
+      { "id": "b", "text": "Manter branches de `develop` e `release` de longa duração, além do `main`." },
+      { "id": "c", "text": "Criar um branch a partir do `main`, fazer commits, abrir um Pull Request, discutir, revisar, testar e, uma vez aprovado e com os testes passando, fazer o merge no `main` e deploy imediatamente. O branch de funcionalidade é então deletado." },
+      { "id": "d", "text": "Evitar o uso de Pull Requests para acelerar o desenvolvimento." }
     ],
-    "correctAnswerId": "d",
-    "explanation": "O GitHub flow é caracterizado por branches de curta duração que são mesclados no `main` e implantados frequentemente. Múltiplos branches de longa duração são mais característicos de fluxos como o Gitflow."
+    "correctAnswerId": "c",
+    "explanation": "O GitHub Flow enfatiza branches de funcionalidade de curta duração que são mesclados diretamente no `main` e implantados continuamente. GitFlow, por outro lado, utiliza branches intermediários como `develop` e `release`."
   },
   {
     "id": 5,
-    "text": "Qual é a implicação mais significativa de o Git ser um Sistema de Controle de Versão Distribuído (DVCS)?",
+    "text": "Qual característica do Git como um Sistema de Controle de Versão Distribuído (DVCS) oferece a maior vantagem para um desenvolvedor trabalhando remotamente com conexões de internet instáveis?",
     "options": [
-      { "id": "a", "text": "É obrigatório ter conexão constante com a internet para realizar commits." },
-      { "id": "b", "text": "Cada colaborador possui uma cópia local completa do repositório, incluindo todo o histórico, o que permite trabalho offline, maior velocidade para operações locais e redundância de dados." },
-      { "id": "c", "text": "Apenas um administrador central pode aprovar merges de código." },
-      { "id": "d", "text": "O histórico do projeto é armazenado apenas no servidor central." }
+      { "id": "a", "text": "A necessidade de uma conexão constante com o servidor central para visualizar o histórico de commits." },
+      { "id": "b", "text": "A capacidade de cada desenvolvedor ter uma cópia completa do repositório localmente, incluindo todo o histórico. Isso permite que a maioria das operações (commit, branch, merge, view history) seja realizada offline. A sincronização com o remoto (`push`/`pull`) só é necessária quando se deseja compartilhar ou obter atualizações." },
+      { "id": "c", "text": "O armazenamento de branches apenas no servidor central para economizar espaço local." },
+      { "id": "d", "text": "A centralização de todas as decisões de merge em um único administrador." }
     ],
     "correctAnswerId": "b",
-    "explanation": "A natureza distribuída do Git significa que cada clone é um backup completo do repositório, permitindo operações locais rápidas e trabalho offline."
+    "explanation": "Sendo um DVCS, cada clone do Git contém o histórico completo, permitindo trabalho offline extensivo. Isso contrasta com sistemas centralizados (CVCS) que exigem conexão para a maioria das operações."
   },
   {
     "id": 6,
-    "text": "Um desenvolvedor deseja apresentar suas habilidades e projetos de forma destacada em sua página de perfil no GitHub. Qual recurso é mais indicado para isso?",
+    "text": "Um profissional de UX/UI deseja usar seu perfil GitHub para mostrar seus melhores projetos e contribuições de design. Quais recursos do perfil GitHub são mais eficazes para este propósito?",
     "options": [
-      { "id": "a", "text": "Criar um Gist secreto com seu currículo." },
-      { "id": "b", "text": "Fixar (pin) seus repositórios mais importantes e criar um Profile README." },
-      { "id": "c", "text": "Dar 'star' em todos os seus próprios repositórios." },
-      { "id": "d", "text": "Apenas preencher os campos de metadata do perfil, como nome e bio." }
+      { "id": "a", "text": "Dar 'star' em todos os repositórios em que contribuiu e preencher apenas o campo 'bio'." },
+      { "id": "b", "text": "Apenas listar seus projetos na seção 'Achievements'." },
+      { "id": "c", "text": "Criar um Profile README (repositório especial `username/username` com um `README.md`) para uma apresentação rica e personalizada, e fixar (pin) os repositórios mais relevantes que demonstram suas habilidades e projetos." },
+      { "id": "d", "text": "Escrever um longo Gist detalhando seu portfólio e linká-lo na bio." }
     ],
-    "correctAnswerId": "b",
-    "explanation": "O Profile README (um repositório com o mesmo nome do seu usuário) permite uma apresentação rica com Markdown, e fixar repositórios destaca seus principais trabalhos na página de perfil."
+    "correctAnswerId": "c",
+    "explanation": "O Profile README permite uma página de perfil altamente personalizável usando Markdown, e fixar repositórios os destaca visualmente. Achievements são automáticos, e a bio é limitada."
   },
   {
     "id": 7,
-    "text": "Durante uma revisão de pull request, um revisor quer rapidamente atribuir o PR a si mesmo para indicar que está trabalhando nele. Qual a forma mais eficiente de fazer isso usando a interface do GitHub?",
+    "text": "Em uma revisão de Pull Request no GitHub, um colega de equipe sugere uma pequena alteração em uma linha de código. Qual é a forma mais eficiente e integrada para o revisor propor essa correção específica, permitindo ao autor aplicá-la com um clique?",
     "options": [
-      { "id": "a", "text": "Editar o título do PR adicionando seu nome de usuário." },
-      { "id": "b", "text": "Digitar o slash command `/assign @me` ou `/assign` no campo de comentário." },
-      { "id": "c", "text": "Enviar um e-mail para o autor do PR." },
-      { "id": "d", "text": "Clonar o repositório e fazer um commit especial." }
+      { "id": "a", "text": "Deixar um comentário geral no PR descrevendo a alteração necessária." },
+      { "id": "b", "text": "Enviar um e-mail ao autor com o trecho de código corrigido." },
+      { "id": "c", "text": "Usar a funcionalidade de 'Suggested Changes' (Sugestões de Alterações) diretamente na aba 'Files changed', que permite editar a linha e propor a mudança em formato de patch." },
+      { "id": "d", "text": "Clonar o branch do PR, fazer a alteração, e fazer push, forçando a atualização." }
     ],
-    "correctAnswerId": "b",
-    "explanation": "Slash commands como `/assign` são atalhos rápidos para executar ações em issues e pull requests diretamente da caixa de comentários."
+    "correctAnswerId": "c",
+    "explanation": "As 'Suggested Changes' são uma ferramenta poderosa para revisões colaborativas, permitindo que pequenas correções sejam propostas e aceitas de forma muito eficiente pelo autor do PR."
   },
   {
     "id": 8,
@@ -568,7 +568,7 @@
     "id": 48,
     "text": "Um projeto quer que todos os Pull Requests incluam uma checklist para o contribuidor confirmar que os testes foram executados e a documentação foi atualizada. Como isso pode ser padronizado?",
     "options": [
-      { "id": "a", "text": "Editando manualmente cada descrição de PR após a criação." },
+      { "id": "a", "text": "Editando manually cada descrição de PR após a criação." },
       { "id": "b", "text": "Criando um 'pull request template' (modelo de pull request)." },
       { "id": "c", "text": "Usando uma GitHub Action para adicionar a checklist como comentário." },
       { "id": "d", "text": "Configurando CODEOWNERS para adicionar a checklist." }
@@ -1261,3 +1261,5 @@
     "explanation": "GitHub Desktop é uma interface gráfica para Git e para interagir com repositórios GitHub. Ele não executa workflows do GitHub Actions localmente; esses workflows rodam em executores (runners) na nuvem do GitHub ou auto-hospedados. Ferramentas como `act` podem simular isso, mas não são parte do GitHub Desktop."
   }
 ]
+
+    
