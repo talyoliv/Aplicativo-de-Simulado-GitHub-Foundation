@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle2, XCircle, BarChart3, Clock, History, Sparkles, RefreshCw } from 'lucide-react';
+import { CheckCircle2, XCircle, BarChart3, Clock, History } from 'lucide-react';
 import { Suspense } from 'react';
 
 interface ResultadoPageProps {
@@ -11,7 +11,6 @@ interface ResultadoPageProps {
     corretas?: string;
     incorretas?: string;
     tempo?: string;
-    review?: string; // To indicate if it was a review session
   };
 }
 
@@ -20,29 +19,8 @@ function ResultsContent({ searchParams }: ResultadoPageProps) {
   const corretas = parseInt(searchParams.corretas || '0', 10);
   const incorretas = parseInt(searchParams.incorretas || '0', 10);
   const tempo = parseInt(searchParams.tempo || '0', 10); // tempo em segundos
-  const isReviewSession = searchParams.review === 'true';
-
 
   if (total === 0 || isNaN(total) || isNaN(corretas) || isNaN(incorretas)) {
-     // Special case for review sessions that might end up with 0 questions if all were cleared
-    if (isReviewSession && total === 0) {
-      return (
-        <Card className="w-full max-w-lg shadow-2xl text-center">
-          <CardHeader>
-            <div className="flex justify-center mb-4">
-                <Sparkles className="w-16 h-16 text-primary" />
-            </div>
-            <CardTitle className="text-3xl font-headline">Revisão Concluída!</CardTitle>
-            <CardDescription>Você não tem mais questões erradas para revisar.</CardDescription>
-          </CardHeader>
-          <CardFooter className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-6">
-            <Button asChild className="w-full sm:w-auto">
-              <Link href="/">Voltar ao Início</Link>
-            </Button>
-          </CardFooter>
-        </Card>
-      );
-    }
     return (
       <div className="text-center">
         <p className="text-destructive text-lg mb-4">Erro ao carregar resultados. Dados inválidos.</p>
@@ -61,14 +39,10 @@ function ResultsContent({ searchParams }: ResultadoPageProps) {
     <Card className="w-full max-w-lg shadow-2xl">
       <CardHeader className="text-center">
         <div className="flex justify-center mb-4">
-            {isReviewSession ? <RefreshCw className="w-16 h-16 text-accent" /> : <BarChart3 className="w-16 h-16 text-primary" />}
+            <BarChart3 className="w-16 h-16 text-primary" />
         </div>
-        <CardTitle className="text-3xl font-headline">
-            {isReviewSession ? "Resultado da Revisão" : "Resultado Final"}
-        </CardTitle>
-        <CardDescription>
-            {isReviewSession ? "Confira seu desempenho nesta sessão de revisão." : "Confira seu desempenho no simulado."}
-        </CardDescription>
+        <CardTitle className="text-3xl font-headline">Resultado Final</CardTitle>
+        <CardDescription>Confira seu desempenho no simulado.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg">
@@ -104,18 +78,14 @@ function ResultsContent({ searchParams }: ResultadoPageProps) {
       </CardContent>
       <CardFooter className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-6">
         <Button asChild className="w-full sm:w-auto">
-          <Link href="/">
-             {isReviewSession ? "Voltar ao Início" : "Fazer Novo Simulado"}
+          <Link href="/">Fazer Novo Simulado</Link>
+        </Button>
+        <Button variant="outline" asChild className="w-full sm:w-auto">
+          <Link href="/historico">
+            <History className="mr-2 h-5 w-5" />
+            Ver Histórico
           </Link>
         </Button>
-        {!isReviewSession && (
-            <Button variant="outline" asChild className="w-full sm:w-auto">
-            <Link href="/historico">
-                <History className="mr-2 h-5 w-5" />
-                Ver Histórico
-            </Link>
-            </Button>
-        )}
       </CardFooter>
     </Card>
   );

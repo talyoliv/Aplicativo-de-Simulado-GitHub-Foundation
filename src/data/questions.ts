@@ -26,16 +26,4 @@ export function getShuffledQuestions(count: number): Question[] {
   return shuffled.slice(0, Math.min(count, shuffled.length));
 }
 
-export function getQuestionsByIds(ids: number[]): Question[] {
-  if (!allQuestions || allQuestions.length === 0) {
-    console.error("No questions loaded from JSON data.");
-    return [];
-  }
-  if (!ids || ids.length === 0) {
-    return [];
-  }
-  const selectedQuestions = allQuestions.filter(question => ids.includes(question.id));
-  // We might want to shuffle the review questions as well so they don't always appear in the same order
-  return shuffleArray(selectedQuestions);
-}
     
