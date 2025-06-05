@@ -16,7 +16,7 @@ Criar uma ferramenta simples, intuitiva e em português que permite aos usuário
 - **Firebase Studio**
 - **JSON como base de dados das questões**
 - **Lógica de sorteio randômico**
-- Interface responsiva e interativa
+- **Interface responsiva e interativa**
 
 ## ✨ Funcionalidades
 
@@ -29,7 +29,16 @@ Criar uma ferramenta simples, intuitiva e em português que permite aos usuário
 - 🧠 Explicações breves ao final da resposta
 - 🔁 Botão de “fazer novo simulado”
 - ❌ Opção de abandonar simulado a qualquer momento
+- 🧾 **Histórico de Simulados Realizados** – acompanhe seu desempenho e evolução ao longo dos testes
+- ♻️ **Revisão Inteligente** – refaça apenas as questões que você errou em simulados anteriores, reforçando seu aprendizado de forma direcionada
 
 ## 📂 Base de Dados
 
 As questões (atualmente **105**) foram criadas com base no material oficial **Study Guide GitHub Foundations**, e estão estruturadas em um arquivo `.json` que serve como API local.
+
+---
+
+## Cloud Computing Service
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
+👉 [Acesse o Simulado GitHub Foundations PT-BR](https://aplicativo-de-simulado-git-hub-foun-nine.vercel.app/)
